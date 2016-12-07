@@ -17,7 +17,7 @@ function Song(title,artist,album,year)
   };
   this.listened = 0;
   this.play = function(){
-    listened++;
+    this.listened++;
   };
 }
 
@@ -43,5 +43,6 @@ function nextSong()
 //Show song's information in the "nowPlaying" span
 function displaySong()
 {
-  document.getElementById("nowPlaying").innerHTML = allSongs[current].toString();
+  document.getElementById("nowPlaying").innerHTML = allSongs[current].toString() + allSongs[current].listened;
+  
 }
