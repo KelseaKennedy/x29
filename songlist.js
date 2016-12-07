@@ -43,7 +43,7 @@ function nextSong()
 //Show song's information in the "nowPlaying" span
 function displaySong()
 {
-  allSongs[current].play;
+  allSongs[current].play();
   document.getElementById("nowPlaying").innerHTML = allSongs[current].toString() + allSongs[current].listened;
   
 }
